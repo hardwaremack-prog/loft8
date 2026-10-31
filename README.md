@@ -4,6 +4,12 @@ LoFT8 turns an SX1262-based Meshtastic board (Heltec V3, T-Beam SX1262, T3-S3) i
 
 Anyone running WSJT-X (or any FT8 decoder) on a receiver tuned to the same frequency in USB mode will decode you like any other FT8 station.
 
+![Transmit tab](docs/transmit.png)
+
+| Receive: decoding real off-air FT8 | Receive: LoRa board as a signal detector |
+|---|---|
+| ![Receive tab](docs/receive.png) | ![Signal meter](docs/signal-meter.png) |
+
 ## What it can and can't do
 
 - **The LoRa board can't decode FT8.** Its narrowest receive filter is about 4.8 kHz wide, so it can't tell FT8's 6.25 Hz-spaced tones apart. LoFT8 still uses it as a **signal detector**: it shows the channel strength live and flags FT8-length bursts in each slot. To actually *read* messages, use an RTL-SDR (about $35) or any receiver.
